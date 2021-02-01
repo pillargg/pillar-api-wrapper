@@ -4,7 +4,7 @@ import requests
 
 
 class Pillar:
-    def __init__(self, token=None, base_url="***REMOVED***"):
+    def __init__(self, token=None, base_url=""):
 
         if token is None:
             raise AssertionError('No token specified.')
