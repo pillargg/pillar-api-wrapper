@@ -1,2 +1,2 @@
-# pillar-api
-Python Pillar API Module
+# Pillar API Wrapper
+

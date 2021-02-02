@@ -1,11 +1,21 @@
 from datetime import datetime
+from typing import List
 
 import requests
 
 
 class Pillar:
-    def __init__(self, token=None, base_url=""):
+    '''
+    Base API Class. 
+    '''
 
+    def __init__(self, token=None, base_url="") -> None:
+        '''
+        Initialization function for the class.
+
+        The variable `token` is the API token needed for the API itself. The variable `base_url` is the url
+        base URL for the API.
+        '''
         if token is None:
             raise AssertionError('No token specified.')
 
@@ -15,8 +25,10 @@ class Pillar:
 
         self.response = None
 
-    def get_streamers_to_poll(self):
-
+    def get_streamers_to_poll(self) -> List[str]:
+        '''
+        Gets the streamers that the application should check for. Returns a list.
+        '''
         self.payload = {
             'server_token': self.token
         }
@@ -26,8 +38,10 @@ class Pillar:
         self.response.raise_for_status()
         return self.response.json()
 
-    def post_video(self, twitch_username, thumbnail_url, video_url, video_title):
-
+    def post_video(self, twitch_username, thumbnail_url, video_url, video_title) -> None:
+        '''
+        Posts the video to the database. All input variables are strings and are self explanatory.
+        '''
         self.payload = {
             'server_token': self.token,
             'twitch_username': twitch_username,
@@ -41,8 +55,10 @@ class Pillar:
             f'{self.base_url}/postUserVideo', json=self.payload)
         self.response.raise_for_status()
 
-    def get_youtube_credentials(self, twitch_username):
-
+    def get_youtube_credentials(self, twitch_username) -> dict:
+        '''
+        Gets the YouTube credentials for the user.
+        '''
         self.payload = {
             'server_token': self.token,
             'twitch_username': twitch_username

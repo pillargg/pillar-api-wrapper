@@ -5,5 +5,5 @@ repos:
     rev: v1.5.4
     hooks:
     -   id: autopep8
-        args: ['-r', '--in-place', 'src']
+        args: ['-r', '--in-place', 'pillar']
         
