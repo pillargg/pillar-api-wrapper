@@ -6,7 +6,11 @@ import requests
 
 class Pillar:
     '''
-    Base API Class. 
+    Base API Class. Import with: 
+
+    ```
+    from pillar import Pillar
+    ```
     '''
 
     def __init__(self, token=None, base_url="") -> None:
