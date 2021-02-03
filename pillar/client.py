@@ -52,7 +52,7 @@ class Pillar:
             'thumbnail_url': thumbnail_url,
             'video_url': video_url,
             'video_title': video_title,
-            'timestamp': datetime.now()
+            'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
         }
 
         self.response = requests.post(
