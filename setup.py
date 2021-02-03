@@ -5,7 +5,7 @@ with open('README.md') as readme:
 
 setuptools.setup(
     name='pillar-api-wrapper',
-    version='0.0.1',
+    version='0.0.2',
     author="PillarGG",
     author_email='opensource@pillar.gg',
     description='Python wrapper for our REST API.',
