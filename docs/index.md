@@ -1,4 +1,4 @@
-# `Pillar`
+# Pillar
 
 ::: pillar.Pillar
     handler: python
