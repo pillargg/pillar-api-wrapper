@@ -23,7 +23,6 @@ mkdocstrings==0.14.0
 nltk==3.5
 nodeenv==1.5.0
 packaging==20.9
--e git+git@github.com:pillargg/pillar-api-wrapper.git@bf5b527513b5da46e8916c40dd410e9d93c0d730#egg=pillar_api_wrapper
 pluggy==0.13.1
 pre-commit==2.10.0
 py==1.10.0
